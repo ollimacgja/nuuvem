@@ -37,7 +37,6 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.5'         #Tests
   gem 'factory_girl_rails'            #Geração das factories de testes
   gem 'simplecov', :require => false  #Gem para cobertura de testes
-  gem 'shoulda-matchers', '~> 3.1'    #Gem para facilitar alguns testes de relacionamento.
   gem 'rubocop', require: false       #Gem para avaliação de codigo segundo o Ruby style Guide
 end
 # Use ActiveModel has_secure_password
