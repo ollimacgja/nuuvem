@@ -26,7 +26,7 @@ Para iniciar a aplicação é necessário primeiramente configurar o banco de da
   rake db:setup
 ```
 
-Este comando irá cria o banco de dados e populá-lo com as informações do arquivo seed.rb
+Este comando irá criar o banco de dados e populá-lo com as informações do arquivo seed.rb
 
 Após este processo ser realizado, poderemos iniciar o servidor com o comando:
 
