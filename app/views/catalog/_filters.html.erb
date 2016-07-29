@@ -1,0 +1,16 @@
+<div class="panel panel-default">
+  <div class="panel-heading"><%= t('site.filters') %></div>
+  <div class="panel-body">
+    <%= simple_form_for :filters, { url: catalog_index_path, method: :get } do |f| %>
+      <div class='col-md-5'>
+        <%= f.input :desc,label: false, placeholder: t('site.search'), input_html: { value: @filter[:desc] } %>
+      </div>
+      <div class='col-md-5'>
+        <%= f.input :category_id,collection: @categories,label_method: :name,value_method: :id,label: false , include_blank: t('activerecord.models.category'), selected: @filter[:category_id]%>
+      </div>
+      <div class='col-md-2'>
+        <%= f.submit t('site.filters'), class: 'btn btn-info' %>
+      </div>
+    <% end %>
+  </div>
+</div>

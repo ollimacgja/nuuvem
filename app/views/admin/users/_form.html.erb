@@ -1,0 +1,18 @@
+<%= simple_form_for([:admin, @user], html: { class: 'form-horizontal' }) do |f| %>
+  <div class='col-md-10'>
+
+  <%= f.input :email %>
+  <%= f.input :password %>
+  <%= f.input :admin %>
+
+
+  <%= f.submit class: 'btn btn-success' %>
+  <%= link_to t('admin.back'), admin_users_path, class: 'btn btn-danger' %>
+  </div>
+<% end %>
+<script type="text/javascript">
+  $('.nav.nav-tabs').append($(".form-horizontal").find('li'))
+  $('.tab-content').append($(".form-horizontal").find('.tab-pane'))
+  $('.nav.nav-tabs').find('li').first().addClass('active')
+  $('.tab-content').find('.tab-pane').first().addClass('active')
+</script>

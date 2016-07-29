@@ -1,0 +1,34 @@
+<%= simple_form_for([:admin, @game], html: { class: 'form-horizontal' }) do |f| %>
+  <div class='col-md-10'>
+    <%= f.input :name %>
+    <%= f.input :sku, disabled: true %>
+    <%= f.input :boxshot %>
+    <%= f.association :category %>
+
+    <ul class="nav nav-tabs" role="tablist">
+    </ul>
+    <div class="tab-content">
+    </div>
+    <% Game.globalize_attribute_names.each do |lang| %>
+      <!-- <li role="presentation"><a href="#<%= lang.to_s.split('_',2)[1]%>" aria-controls="<%= lang.to_s.split('_',2)[1]%>" role="tab" data-toggle="tab"><%= lang.to_s.split('_', 2)[1] %></a></li> -->
+      <li role="presentation"><%= link_to lang.to_s.split('_', 2)[1], "##{lang.to_s.split('_', 2)[1]}", aria: { control: lang.to_s.split('_',2)[1] }, role: 'tab', data: { toggle: 'tab'} %></li>
+      <div role="tabpanel" class="tab-pane" id="<%= lang.to_s.split('_',2)[1]%>"> <%= f.input lang %></div>
+    <% end %>
+    <%= f.input :published, as: :boolean %>
+    <%= f.submit class: 'btn btn-success' %>
+    <%= link_to t('admin.back'), admin_games_path, class: 'btn btn-danger' %>
+  </div>
+  <div class='col-md-2'>
+    <%= link_to image_tag(@game.boxshot.present? ? @game.boxshot : 'placeholder.png'), '#', class: 'thumbnail' %>
+  </div>
+<% end %>
+<script type="text/javascript">
+  $('.nav.nav-tabs').append($(".form-horizontal").find('li'))
+  $('.tab-content').append($(".form-horizontal").find('.tab-pane'))
+  $('.nav.nav-tabs').find('li').first().addClass('active')
+  $('.tab-content').find('.tab-pane').first().addClass('active')
+
+  $( '#game_boxshot' ).on('input', function() {
+    $('.thumbnail').find('img').attr("src", this.value)
+  });
+</script>

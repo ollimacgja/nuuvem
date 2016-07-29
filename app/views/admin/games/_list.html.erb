@@ -1,0 +1,18 @@
+<table class="table table-hover">
+  <thead>
+    <th><%= t('activerecord.attributes.game.boxshot') %></th>
+    <th><%= t('activerecord.attributes.game.name') %></th>
+    <th><%= t('activerecord.attributes.game.sku') %></th>
+    <th><%= t('activerecord.attributes.game.description') %></th>
+    <th><%= t('activerecord.attributes.game.category') %></th>
+    <th><%= t('activerecord.attributes.game.published') %></th>
+    <th class='text-right'><%= t('admin.actions') %></th>
+  </thead>
+  <tbody>
+    <% @games.each do |game| %>
+      <tr>
+        <%= render game %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

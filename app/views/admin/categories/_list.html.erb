@@ -1,0 +1,13 @@
+<table class="table table-hover">
+  <thead>
+    <th><%= t('activerecord.attributes.category.name') %></th>
+    <th class='text-right'><%= t('admin.actions') %></th>
+  </thead>
+  <tbody>
+    <% @categories.each do |category| %>
+      <tr>
+        <%= render category %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

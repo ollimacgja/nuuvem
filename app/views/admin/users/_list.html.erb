@@ -1,0 +1,14 @@
+<table class="table table-hover">
+  <thead>
+    <th><%= t('activerecord.attributes.user.email') %></th>
+    <th><%= t('activerecord.attributes.user.admin') %></th>
+    <th class='text-right'><%= t('admin.actions') %></th>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <%= render user %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

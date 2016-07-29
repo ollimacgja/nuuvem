@@ -1,0 +1,61 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+.locale-menu{
+  min-width: 50px;
+}
+
+body{
+  background-color: #3685B5;
+  color: #061826;
+}
+
+.container{
+  border: 1px solid;
+  border-radius: 25px;
+  border-color: #061826;
+  background-color: #fff;
+  padding:  15px;
+}
+
+.catalog-game{
+  border: 1px solid;
+  border-radius: 5px;
+  border-color: #061826;
+  background-color: #ccc;
+  padding:  15px;
+  margin: 20px;
+}
+
+.new-icon{
+  float: right;
+  margin-top: -20px;
+  font-size: 20px;
+}
+
+.thumbnail img {
+  min-height:200px;
+  height:200px;
+}
+.catalog-img{
+  max-width: 100%;
+}
+.green{
+  color: green;
+}
+.red{
+  color: red;
+}

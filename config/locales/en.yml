@@ -1,0 +1,69 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  site:
+    title: 'FooStore - Games'
+    current_locale: 'Language:'
+    logged_as: 'Logged as: '
+    catalog: 'Games Catalog'
+    filters: 'Search'
+    search: 'Search Name/Description'
+  admin:
+    title: 'FooStore - Administration'
+    not_allowed: 'Only Administrators are allowed.'
+    filters: 'Filters'
+    actions: 'Actions'
+    are_you_sure: 'Are you Sure?'
+    summary: 'Application Summary'
+    records: 'Number of Records'
+    back: 'Cancel'
+  devise:
+    log_in: 'Login'
+    log_out: 'Logout'
+    sign_up: 'Sign Up'
+    char_min: 'characters minimum'
+  activerecord:
+    attributes:
+      category:
+        new: 'New Category'
+        edit: 'Edit Category'
+        created: 'Category created'
+        updated: 'Category updated'
+        destroyed: 'Category destroyed'
+        name_en: 'Name'
+        name_pt_br: 'Nome'
+      user:
+        admin: 'Administrator'
+        new: 'New User'
+        edit: 'Edit User'
+        created: 'User created'
+        updated: 'User updated'
+        destroyed: 'User destroyed'
+      game:
+        new: 'New Game'
+        edit: 'Edit Game'
+        created: 'Game created'
+        updated: 'Game updated'
+        destroyed: 'Game destroyed'
+        description_en: 'Description'
+        description_pt_br: 'Descrição'
+

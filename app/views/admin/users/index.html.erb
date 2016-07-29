@@ -1,0 +1,12 @@
+<div class='col-md-10'>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title"><%= t('activerecord.models.user') %></h3>
+      <%= link_to content_tag(:i, nil, class: 'fa fa-plus-circle new-icon'), new_admin_user_path %>
+
+    </div>
+    <div class="panel-body">
+      <%= render 'list' %>
+    </div>
+  </div>
+</div>
